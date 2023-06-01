@@ -27,21 +27,29 @@ router.get('/:id', (req, res) => {
     .catch(err => res.status(404).json({ noProjectfound: 'No Project found' }));
 });
 
+// router.get('/:coin_name', (req, res) => {
+//   Project.findById(req.params.id)
+//     .then(Project => res.json(Project))
+//     .catch(err => res.status(404).json({ noProjectfound: 'No Project found' }));
+// });
+
 // @route GET api/Projects
 // @description add/save Project
 // @access Public
 router.post('/', (req, res) => {
+  console.log(req.body);
   Project.create(req.body)
     .then(Project => res.json({ msg: 'Project added successfully' }))
-    .catch(err => res.status(400).json({ error: 'Unable to add this Project' }));
+    .catch(err => res.status(400).json({ error: 'Unable to add this Project' , request: req.body}));
 });
 
 // @route GET api/Projects/:id
 // @description Update Project
 // @access Public
 router.put('/:id', (req, res) => {
-  Project.findByIdAndUpdate(req.params.id, req.body)
-    .then(Project => res.json({ msg: 'Updated successfully' }))
+  console.log(req.params.id)
+  Project.findByIdAndUpdate(req.params.id, { project_status: "COMPLETED" })
+    .then(project => res.json({ msg: 'Updated successfully' }))
     .catch(err =>
       res.status(400).json({ error: 'Unable to update the Database' })
     );

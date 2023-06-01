@@ -2,11 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const projectSchema = new Schema({
-  id: {
-    type: String,
-    required: true,
-    unique: true
-  },
   project_name: {
     type: String,
     required: true
@@ -41,23 +36,23 @@ const projectSchema = new Schema({
   },
   total_raised: {
     type: Number,
-    required: true
+    default: 0
   },
   progress: {
-    type: Number,
-    required: true
+    type: Number
   },
   token_sale_starts: {
     type: Date,
-    required: true
+    default: Date.now
   },
   token_sale_ends: {
     type: Date,
-    required: true
+    default: Date.now
   },
   project_status: {
     type: String,
-    required: true
+    required: true,
+    default: "TOKEN SALE"
   },
   thumb: {
     type: String,

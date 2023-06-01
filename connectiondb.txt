@@ -1,0 +1,11 @@
+bigmanliose
+dh2lj31mkmgyPAgY
+mongodb+srv://bigmanliose:<password>@brc.rz2wqpm.mongodb.net/
+
+OLD
+{
+    "mongoURI":
+      "mongodb+srv://lionelsiduna:tDhtf86Nzkj0RRkq@brc.d9g7lh4.mongodb.net/?retryWrites=true&w=majority"
+}
+
+mongodb+srv://bigmanliose:dh2lj31mkmgyPAgY@brc.rz2wqpm.mongodb.net/
