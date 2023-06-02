@@ -1,4 +1,6 @@
 {
     "mongoURI":
-      "mongodb+srv://bigmanliose:dh2lj31mkmgyPAgY@brc.rz2wqpm.mongodb.net/"
+      "mongodb+srv://bigmanliose:dh2lj31mkmgyPAgY@brcdao.26tzvno.mongodb.net/?retryWrites=true&w=majority/"
 }
+
+
